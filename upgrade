@@ -1,0 +1,2 @@
+#!/bin/bash
+helm -n neos upgrade --install neos -f neos.yaml ../home/charts/neos

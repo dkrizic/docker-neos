@@ -1,0 +1,8 @@
+ingress:
+  enabled: true
+  hosts:
+    - host: test1.krizic.net
+      paths:
+      - path: "/"
+image:
+  tag: 2e1af73-linux-arm64
