@@ -1,2 +1,4 @@
 #!/bin/bash
+helm repo add groundhog2k https://groundhog2k.github.io/helm-charts/
+helm -n neos upgrade --install neos-mariadb -f mariadb.yaml groundhog2k/mariadb
 helm -n neos upgrade --install neos -f neos.yaml ../home/charts/neos
