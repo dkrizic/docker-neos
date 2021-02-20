@@ -5,4 +5,4 @@ ingress:
       paths:
       - path: "/"
 image:
-  tag: 5dc5ed5-linux-arm64
+  tag: 3e824b6-linux-arm64
