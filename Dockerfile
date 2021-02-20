@@ -6,6 +6,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
   && mv composer.phar /usr/local/bin/composer
 WORKDIR /var/www/html
 RUN composer create-project neos/neos-base-distribution neos
-RUN composer update
 RUN a2enmod rewrite
 CMD service apache2 start && while true; do sleep 30; done
