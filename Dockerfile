@@ -9,5 +9,6 @@ RUN composer create-project neos/neos-base-distribution neos
 RUN rm -rf html
 RUN ln -s neos/Web html
 RUN a2enmod rewrite
+WORKDIR /
 COPY conf/ /
 CMD service apache2 start && while true; do sleep 30; done
