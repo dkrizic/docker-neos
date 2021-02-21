@@ -7,9 +7,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 WORKDIR /var/www/html
 RUN composer create-project neos/neos-base-distribution neoscms
 RUN a2enmod rewrite
-RUN a2ensite neoscms
 WORKDIR /
 RUN chown -R www-data:www-data /var/www/html/neoscms/
 RUN chmod -R 755 /var/www/html/neoscms/
 COPY conf/ /
+RUN a2dissite 000-default
+RUN a2ensite neoscms
 CMD service apache2 start && while true; do sleep 30; done
