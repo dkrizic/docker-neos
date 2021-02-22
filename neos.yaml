@@ -7,11 +7,11 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-body-size: 100m
     nginx.ingress.kubernetes.io/client-body-buffer-size: 100m
   hosts:
-    - host: neos.home.krizic.net
+    - host: test1.krizic.net
       paths:
       - path: "/"
 image:
-  tag: 15046ef-linux-arm64
+  tag: 58feaad-linux-arm64
 nodeSelector:
   kubernetes.io/arch: arm64
 database:
@@ -19,4 +19,16 @@ database:
   password: neos
   hostname: neos-mariadb
   name: neos
-
+neos:
+  settings:
+    Neos:
+      Flow:
+        http:
+          trustedProxies:
+            proxies:
+              - '*'
+            headers:
+              clientIp: 'X-Forwarded-For'
+              host: 'X-Forwarded-Host'
+              port: 'X-Forwarded-Port'
+              proto: 'X-Forwarded-Proto'

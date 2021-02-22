@@ -13,4 +13,5 @@ RUN chmod -R 755 /var/www/html/neoscms/
 COPY conf/ /
 RUN a2dissite 000-default
 RUN a2ensite neoscms
+RUN a2ensite neoscms-ssl
 CMD service apache2 start && while true; do sleep 30; done
