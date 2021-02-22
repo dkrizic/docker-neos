@@ -7,6 +7,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 WORKDIR /var/www/html
 RUN composer create-project neos/neos-base-distribution neoscms
 RUN a2enmod rewrite
+RUN a2enmod ssl
 WORKDIR /
 RUN chown -R www-data:www-data /var/www/html/neoscms/
 RUN chmod -R 755 /var/www/html/neoscms/

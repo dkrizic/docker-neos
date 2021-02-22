@@ -6,12 +6,15 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "360"
     nginx.ingress.kubernetes.io/proxy-body-size: 100m
     nginx.ingress.kubernetes.io/client-body-buffer-size: 100m
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
   hosts:
     - host: test1.krizic.net
       paths:
       - path: "/"
+service:
+  port: 443
 image:
-  tag: 58feaad-linux-arm64
+  tag: a69cb49-linux-arm64
 nodeSelector:
   kubernetes.io/arch: arm64
 database:
