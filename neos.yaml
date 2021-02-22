@@ -11,7 +11,7 @@ ingress:
       paths:
       - path: "/"
 image:
-  tag: 1335102d-linux-arm64
+  tag: 15046ef-linux-arm64
 nodeSelector:
   kubernetes.io/arch: arm64
 database:
