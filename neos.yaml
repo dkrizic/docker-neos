@@ -11,10 +11,8 @@ ingress:
     - host: test1.krizic.net
       paths:
       - path: "/"
-service:
-  port: 443
 image:
-  tag: a69cb49-linux-arm64
+  tag: a2182094-linux-arm64
 nodeSelector:
   kubernetes.io/arch: arm64
 database:
