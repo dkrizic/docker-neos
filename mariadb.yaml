@@ -1,9 +1,0 @@
-userDatabase:
-  name: neos
-  user: neos
-  password: neos
-  rootPassword: neos
-storage:
-  requestedSize: 1Gi
-nodeSelector:
-  kubernetes.io/arch: arm64
