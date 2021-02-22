@@ -1,0 +1,9 @@
+Neos:
+  Flow:
+    persistence:
+      backendOptions:
+        dbname: 'neos'
+        user: 'neos'             # adjust to your database user
+        password: 'neos'         # adjust to your database password
+        host: 'neos-mariadb'
+
