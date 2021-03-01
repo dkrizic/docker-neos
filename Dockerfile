@@ -13,3 +13,4 @@ RUN chmod -R 755 /var/www/html/neoscms/
 COPY conf/ /
 RUN a2dissite 000-default
 ENTRYPOINT [ "/bin/bash", "-c", "a2ensite neoscms && service apache2 start && while true; do sleep 30; done" ]
+
