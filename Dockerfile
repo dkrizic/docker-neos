@@ -1,4 +1,4 @@
-FROM arm64v8/ubuntu:latest
+FROM ubuntu:20.10
 RUN export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get install -y apache2 libapache2-mod-php php7.4-cli php-zip php-xml php-mbstring php-mysql php-gd php-gd php-gmagick unzip curl  \
